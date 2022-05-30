@@ -1,0 +1,24 @@
+name: 'Fork Repository'
+description: 'An action that forks repositories'
+inputs:
+  token:
+    description: 'Personal Access Token used to create the fork.'
+    required: true
+    default: "***"
+  organization:
+    description: 'The organization to create the fork under.'
+    required: false
+    default: ${{ github.repository_owner }}
+  repo:
+    description: 'The repository to create fork. Format: Owner/Repo'
+    required: true
+    default: 'Example/Example'
+outputs:
+  fork_url:
+    description: 'The URL of the newly created fork.'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'folder-plus'
+  color: 'purple'

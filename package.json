@@ -1,0 +1,30 @@
+{
+  "name": "actions-fork-repo",
+  "version": "1.0.0",
+  "description": "A GitHub action that forks repositories",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx ncc build src/index.js -m -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheModdingInquisition/actions-fork-repo.git"
+  },
+  "keywords": [
+    "gh-actions"
+  ],
+  "author": "TheModdingInquisition",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheModdingInquisition/actions-fork-repo/issues"
+  },
+  "homepage": "https://github.com/TheModdingInquisition/actions-fork-repo#readme",
+  "dependencies": {
+    "@actions/core": "^1.8.2",
+    "@actions/github": "^5.0.3"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.1"
+  }
+}
