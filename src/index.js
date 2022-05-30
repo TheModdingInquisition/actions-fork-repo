@@ -27,6 +27,7 @@ async function run() {
         } else if (response.status == 404) {
             core.setFailed(`Unknown repository '${toFork}'`);
         }
+        console.log(`The request status code was ${response.status}`);
         core.info(`Forked repository '${toFork}' under "${org}": ${response.data}`);
         
         core.setOutput('fork_url', response.data.html_url);
