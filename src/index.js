@@ -4,7 +4,7 @@ import { context, getOctokit } from '@actions/github';
 run();
 
 async function run() {
-    const token = core.getInput('token') ? core.getInput('token') : process.env['GITHUB_TOKEN'];
+    const token = core.getInput('token', {required: true});
     const org = core.getInput('organization');
     const toFork = core.getInput('repo', {required: true}).toLocaleLowerCase();
     try {
