@@ -32,6 +32,7 @@ async function run() {
         
         core.setOutput('fork_url', response.data.html_url);
     } catch (err) {
+        console.log(err.stack);
         core.setFailed(`Error while trying to fork "${toFork}": ${err}`);
     }
 }
